@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "6814ecbf-8836-4081-ae75-9c636d807eb8",
+		"name": "Microservices v3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10177598"
+	},
+	"item": [
+		{
+			"name": "address-service",
+			"item": [
+				{
+					"name": "/address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/address/kl.rahul@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"address",
+								"kl.rahul@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "config-server",
+			"item": [
+				{
+					"name": "/address-service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/address-service/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"address-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/order-details-processor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/order-details-processor/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"order-details-processor",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/order-service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/order-service/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"order-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/aggregator-service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/aggregator-service/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"aggregator-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/notification-service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/notification-service/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"notification-service",
+								"default"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/event-details-fetcher",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/event-details-fetcher/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"event-details-fetcher",
+								"default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order-details-processor",
+			"item": [
+				{
+					"name": "/order-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8010/order-details/P001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8010",
+							"path": [
+								"order-details",
+								"P001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order-service",
+			"item": [
+				{
+					"name": "/order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8020/order?username=virat.kohli@gmail.com&productId=P002&quantity=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8020",
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "virat.kohli@gmail.com"
+								},
+								{
+									"key": "productId",
+									"value": "P002"
+								},
+								{
+									"key": "quantity",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "aggregator-service",
+			"item": [
+				{
+					"name": "/aggregate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8030/aggregate?username=virat.kohli@gmail.com&productId=P002&quantity=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "virat.kohli@gmail.com"
+								},
+								{
+									"key": "productId",
+									"value": "P002"
+								},
+								{
+									"key": "quantity",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "event-details-fetcher",
+			"item": [
+				{
+					"name": "/event-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8050/event-details/1c7a05a5-599d-4bb7-8b5c-fc8adab05d8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8050",
+							"path": [
+								"event-details",
+								"1c7a05a5-599d-4bb7-8b5c-fc8adab05d8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
