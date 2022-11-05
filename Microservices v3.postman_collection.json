@@ -323,6 +323,108 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/event-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/event-details/1c7a05a5-599d-4bb7-8b5c-fc8adab05d8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"event-details",
+								"1c7a05a5-599d-4bb7-8b5c-fc8adab05d8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/aggregate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aggregate?username=virat.kohli@gmail.com&productId=P002&quantity=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "virat.kohli@gmail.com"
+								},
+								{
+									"key": "productId",
+									"value": "P002"
+								},
+								{
+									"key": "quantity",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/order-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/order-details/P001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order-details",
+								"P001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/order?username=virat.kohli@gmail.com&productId=P002&quantity=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "virat.kohli@gmail.com"
+								},
+								{
+									"key": "productId",
+									"value": "P002"
+								},
+								{
+									"key": "quantity",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
