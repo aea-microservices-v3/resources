@@ -153,6 +153,26 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "/gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/gateway/default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"gateway",
+								"default"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -275,6 +295,30 @@
 							"path": [
 								"event-details",
 								"1c7a05a5-599d-4bb7-8b5c-fc8adab05d8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "/address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/address/kl.rahul@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"address",
+								"kl.rahul@gmail.com"
 							]
 						}
 					},
