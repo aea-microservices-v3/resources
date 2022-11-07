@@ -306,6 +306,39 @@
 			"name": "gateway",
 			"item": [
 				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "/authenticate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"virat.kohli@gmail.com\",\r\n    \"password\": \"vamika@vk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/auth/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"auth",
+										"authenticate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "/address",
 					"request": {
 						"method": "GET",
